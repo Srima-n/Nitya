@@ -1,0 +1,21 @@
+# Core
+numpy
+opencv-python
+requests
+
+# MAVLink flight telemetry and commands
+pymavlink
+
+# Detection and tracking
+ultralytics
+
+# Gesture control
+mediapipe
+
+# Voice translation
+faster-whisper
+sounddevice
+deep-translator
+
+# Raspberry Pi GPIO (fan and LED control). Install on the Pi only.
+RPi.GPIO
