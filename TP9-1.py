@@ -206,7 +206,7 @@ class MavlinkTelemetry:
 def project_to_ground(px, py, W, H, tel: Telemetry, cfg: Config):
     """Estimate the ground position of an image pixel. Small-angle pinhole model, flat ground.
     Returns (lat, lon, horizontal_distance_m) or None if the ray is too close to the horizon."""
-    depression = math.radians(-tel.gimbal_pitch)                 # 90 deg = straight down
+    depression = math.radians(-tel.gimbal_pitch_deg)                 # 90 deg = straight down
     right_ang = (px - W / 2) / (W / 2) * math.radians(cfg.camera_hfov_deg) / 2
     fwd_ang = (H / 2 - py) / (H / 2) * math.radians(cfg.camera_vfov_deg) / 2
     ray_dep = depression - fwd_ang                               # top of image looks further ahead
